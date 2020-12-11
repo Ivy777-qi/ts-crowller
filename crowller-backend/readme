@@ -1,0 +1,69 @@
+1.npm init -y
+2.tsc --init //出现tsconfig文件
+3.npm uninstall ts-node -g  
+4.npm install -D ts-node
+5.package.json   
+  修改"scripts": {
+      "dev": "ts-node ./src/crowller.ts"
+    },
+6.npm install typescript -D
+7.npm install superagent --save
+8.npm install @types/superagent --D
+9.npm install cheerio --save
+10.npm install @types/cheerio
+
+
+
+bulid:编译到bulid中得到.js文件
+1.package.json   
+ "scripts": {
+    "dev": "ts-node ./src/crowller.ts",
+    "bulid":"tsc"
+  },
+"bulid":"tsc -w"//-w表示自动监控,同步ts和js文件
+
+2.tsconfig.json
+  "outDir": "./build", 
+
+
+3.npm install nodemon -D 
+
+"scripts": {
+    "bulid":"tsc -w",
+    "start" :"nodemon  node ./bulid/crowller.js"
+  },
+"nodemonCigfig":{
+  "ignore":["data/*"]
+}
+
+
+
+ dev// "ts-node ./src/crowller.ts",
+
+  "nodemonConfig":{
+
+    "ignore":["data/*"]
+  },
+
+ npm install concurrently -D
+  为了运行方便可以改成
+  "scripts": {
+    "dev": "ts-node ./src/crowller.ts",
+    "bulid": "tsc -w",
+    "start": "nodemon node ./build/crowller.js"
+  },
+
+    "scripts": {
+    "dev:build": "tsc-w",
+    "dev:start": "nodemon node ./build/crowller.js",
+    "dev": "concurrently npm:dev:*"
+  },
+
+
+安装express
+npm install express --save
+安装body-parser 中间件 https://github.com/expressjs/body-parser .t.ds文件类型不准确需要安装
+npm install body-parser --save
+1.解决.t.ds文件类型不准确
+ interface RequestWithBody{}
+2.扩展res,req

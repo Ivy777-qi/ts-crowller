@@ -1,0 +1,21 @@
+.Home {
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  padding-top: 30px;
+  margin: 100px auto;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+Button {
+  margin-left: 8px;
+}
+.showLine {
+  width: 1000px;
+  height: 400px;
+  text-align: center;
+  padding-top: 30px;
+  margin: 100px auto;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
